@@ -1,26 +1,28 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Splines;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 6.0f;
+    public float moveSpeed = 6.0f;
+    public float upForce = 200f;
 
-    private Rigidbody2D rb;
-    private float horizontalInput;
+    public Rigidbody2D rb;
+    float horizontalMovement;
 
-    private void Awake()
+    void Start()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    public void OnMove(InputValue value)
+    void Update()
     {
-        Vector2 input = value.Get<Vector2>();
-        horizontalInput = input.x;
+        rb.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rb.linearVelocity.y);
     }
 
-    private void FixedUpdate()
+    void OnMove(InputValue value)
     {
-        rb.linearVelocity = new Vector2(horizontalInput * moveSpeed, rb.linearVelocity.y);
+        Vector2 input = value.Get<Vector2>();
+        horizontalMovement = input.x;
     }
 }
