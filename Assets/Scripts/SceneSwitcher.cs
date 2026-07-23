@@ -13,7 +13,7 @@ public class SceneSwitcher : MonoBehaviour
     [SerializeField] private float fadeDuration = 1f;
     [SerializeField] private bool fadeInOnStart = true;
 
-    private void Awake()
+    void Awake()
     {
         // Simple singleton so the fader survives scene loads and isn't duplicated.
         if (Instance != null && Instance != this)
@@ -26,7 +26,7 @@ public class SceneSwitcher : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    private void Start()
+    void Start()
     {
         if (fadeInOnStart)
         {
@@ -50,21 +50,21 @@ public class SceneSwitcher : MonoBehaviour
         StartCoroutine(FadeAndLoadRoutine(sceneBuildIndex));
     }
 
-    private IEnumerator FadeAndLoadRoutine(string sceneName)
+    IEnumerator FadeAndLoadRoutine(string sceneName)
     {
         yield return Fade(0f, 1f); // fade to black
         yield return SceneManager.LoadSceneAsync(sceneName);
         yield return Fade(1f, 0f); // fade back in on the new scene
     }
 
-    private IEnumerator FadeAndLoadRoutine(int sceneBuildIndex)
+    IEnumerator FadeAndLoadRoutine(int sceneBuildIndex)
     {
         yield return Fade(0f, 1f);
         yield return SceneManager.LoadSceneAsync(sceneBuildIndex);
         yield return Fade(1f, 0f);
     }
 
-    private IEnumerator Fade(float startAlpha, float endAlpha)
+    IEnumerator Fade(float startAlpha, float endAlpha)
     {
         float elapsed = 0f;
         fadeCanvasGroup.blocksRaycasts = true; // block clicks while fading
