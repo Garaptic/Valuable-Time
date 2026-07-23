@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         float currentSpeed = isSprinting ? moveSpeed * sprintMultiplier : moveSpeed;
         rb.linearVelocity = new Vector2(horizontalMovement * currentSpeed, rb.linearVelocity.y);

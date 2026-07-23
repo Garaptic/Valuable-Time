@@ -7,11 +7,11 @@ public class SceneSwitcher : MonoBehaviour
     public static SceneSwitcher Instance { get; private set; }
 
     [Header("References")]
-    [SerializeField] private CanvasGroup fadeCanvasGroup; // put on the full-screen Image's Canvas/parent
+    [SerializeField] CanvasGroup fadeCanvasGroup; // put on the full-screen Image's Canvas/parent
 
     [Header("Settings")]
-    [SerializeField] private float fadeDuration = 1f;
-    [SerializeField] private bool fadeInOnStart = true;
+    [SerializeField] float fadeDuration = 1f;
+    [SerializeField] bool fadeInOnStart = true;
 
     void Awake()
     {

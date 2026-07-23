@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,3 +41,20 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: 1Sky
+    uniqueID: 43550087
+    locked: 0
+  - name: 2Cloud
+    uniqueID: 1610470691
+    locked: 0
+  - name: 3Background
+    uniqueID: 1113719701
+    locked: 0
+  - name: Player
+    uniqueID: 959884425
+    locked: 0
+  - name: 4Foreground
+    uniqueID: 2160423173
+    locked: 0
+  m_RenderingLayers:
+  - Default
