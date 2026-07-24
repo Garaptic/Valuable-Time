@@ -1965,7 +1965,7 @@ MonoBehaviour:
   sprintMultiplier: 1.8
   upForce: 200
   rb: {fileID: 2021118086}
-  animator: {fileID: 0}
+  animator: {fileID: 2021118088}
 --- !u!50 &2021118086
 Rigidbody2D:
   serializedVersion: 5
