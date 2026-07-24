@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 
     void OnSprint(InputValue value)
     {
+        Debug.Log(value.isPressed);
         isSprinting = value.isPressed;
     }
 }
