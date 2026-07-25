@@ -268,6 +268,7 @@ GameObject:
   - component: {fileID: 151161257}
   - component: {fileID: 151161256}
   - component: {fileID: 151161255}
+  - component: {fileID: 151161258}
   m_Layer: 0
   m_Name: cave
   m_TagString: Untagged
@@ -305,11 +306,11 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.16351223, y: -0.36436915}
+  m_Offset: {x: -0.11030555, y: -0.36436915}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -319,7 +320,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 9.280548, y: 7.022469}
+  m_Size: {x: 9.404276, y: 7.022469}
   m_EdgeRadius: 0
 --- !u!212 &151161256
 SpriteRenderer:
@@ -366,8 +367,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
-  m_SortingLayerID: -2134544123
-  m_SortingLayer: 5
+  m_SortingLayerID: 1113719701
+  m_SortingLayer: 3
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 21300000, guid: 82a7acefb1a33874591fd9176efa3c9b, type: 3}
@@ -395,6 +396,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &151161258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151161254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133075dd000fbd940878b39aae50fe74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::cave
 --- !u!1 &217026396
 GameObject:
   m_ObjectHideFlags: 0
@@ -2027,8 +2040,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.022868395, y: 0.00016999245}
-  m_Size: {x: 1.152453, y: 2.9296274}
+  m_Offset: {x: -0.022868395, y: 0.011969209}
+  m_Size: {x: 1.152453, y: 2.906029}
   m_Direction: 0
 --- !u!95 &2021118088
 Animator:

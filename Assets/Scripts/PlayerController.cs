@@ -12,6 +12,7 @@ public class PlayerController : MonoBehaviour
 
     float horizontalMovement;
     bool isSprinting;
+    public bool canInteract;
 
     void Start()
     {
@@ -49,7 +50,15 @@ public class PlayerController : MonoBehaviour
 
     void OnSprint(InputValue value)
     {
-        Debug.Log(value.isPressed);
         isSprinting = value.isPressed;
+    }
+
+    void OnInteract(InputValue value)
+    {
+        canInteract = value.isPressed;
+        if (value.isPressed && canInteract)
+        {
+            Debug.Log("я трогаю эту сучку");
+        }
     }
 }
