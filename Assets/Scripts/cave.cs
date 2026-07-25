@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class cave : MonoBehaviour
+public class Cave : MonoBehaviour
 {
     bool playerInside;
     
