@@ -269,6 +269,7 @@ GameObject:
   - component: {fileID: 151161256}
   - component: {fileID: 151161255}
   - component: {fileID: 151161258}
+  - component: {fileID: 151161259}
   m_Layer: 0
   m_Name: cave
   m_TagString: Untagged
@@ -306,7 +307,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -408,6 +409,42 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133075dd000fbd940878b39aae50fe74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::cave
+--- !u!58 &151161259
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151161254}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 6
 --- !u!1 &217026396
 GameObject:
   m_ObjectHideFlags: 0
@@ -1979,6 +2016,7 @@ MonoBehaviour:
   upForce: 200
   rb: {fileID: 2021118086}
   animator: {fileID: 2021118088}
+  canInteract: 0
 --- !u!50 &2021118086
 Rigidbody2D:
   serializedVersion: 5
